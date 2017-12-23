@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>Merry Christmas</title>
+<meta name="description" content="Christmas card for friends."/>
+<meta name="keywords" content="christmas,christmas card."/>
+<link type="text/css" href="css/bootstrap.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="js/plax.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.let_it_snow.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
+  <style>
+body{
+font-family: 'Loved by the King', cursive;
+}
+a{text-decoration:none;}
+  .cms
+  {
+  height:700px;
+  position:relative;
+  background:url('img/bg.png');
+  background-size:cover;
+  }
+    canvas.bub
+	{
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    canvas.flare {
+      opacity: 0.5;
+    }
+	.clouds
+	{
+	position:absolute;
+	top:50px;
+	}
+	.text
+	{
+	position:absolute;
+	top:350px;
+	width:50%;
+	height:200px;
+	color:#fff;
+	text-align:center;
+	font-size:28px;
+	}
+	.stars
+	{
+	position:absolute;
+	top:50px;
+	}
+	.moon
+	{
+	position:absolute;
+	top:40px;
+	right:30px;
+	}
+		.merry
+	{
+	position:absolute;
+	top:100px;
+	z-index:10;
+	}
+			.land
+	{
+	position:absolute;
+bottom:0px;
+width:100%;
+	}
+	.cent{position:absolute;margin:auto;left:0; right:0;}
+	.footer{height:auto; font-size:20px; text-align:center;}
+	</style>
+
+</head>
+<body>
+ <div class="container-full" style="overflow:hidden;">
+  <div class="row-fluid cms" id="contact">
+    <div class="col-lg-12">
+	 <div class="row" style="height:700px;">
+	 <img id="merry" class="img-responsive merry cent" height= "80" width="300"data-xrange="10" data-yrange="10" />
+	 <img id="stars" src="img/stars1.png" class="img-responsive stars" data-xrange="20" data-yrange="30" />
+	 <img id="moon" src="img/moon1.png" class="img-responsive moon" />
+	 <img id="clouds" src="img/clouds1.png" class="img-responsive clouds" data-xrange="50" data-yrange="100" />
+	 <div class= "text cent"><p>Merry X-mas and a Happy new year.</p></div>
+	 <img src="img/land2.png" class="img-responsive land" />
+     <canvas  class="bub snow"></canvas>
+
+  </div>
+  </div>
+  </div>
+   <div class="row-fluid footer">
+    <div class="col-lg-4">
+
+	</div>
+	<div class="col-lg-4">
+	<p >Designed by <a href="https://www.github.com/matrxi">Rishabh</a></p>
+	</div>
+   </div>
+  </div>
+    <script>
+	  $(document).ready( function() {
+  	    $("canvas.snow").let_it_snow({
+    	      windPower: 3,
+    	      speed: 1,
+    	      count: 500,
+    	      size: 0
+    	    });
+	  });
+
+	</script>
+	<script type="text/javascript">
+      $(document).ready(function () {
+		$('#stars').plaxify();
+		$('#clouds').plaxify();
+		$('#merry').plaxify();
+		$.plax.enable();
+      })
+    </script>
+
+</body>
+</html>
